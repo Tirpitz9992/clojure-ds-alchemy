@@ -11,3 +11,4 @@
       {:value (+ (:value left-child) (:value right-child))
        :left left-child
        :right right-child})))
+
