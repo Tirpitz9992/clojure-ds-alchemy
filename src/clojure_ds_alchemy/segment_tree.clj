@@ -20,9 +20,15 @@
     (if (and (<= qs start) (>= qe end))
       (:value node)
       (let [mid (quot (+ start end) 2)]
-        (+ (query-range (:left node) start mid qs qe)
+        (+ (query-range (:left node) start mid qs qe) ;继续递归
            (query-range (:right node) (inc mid) end qs qe))))))
 
 (defn update-segment-tree
   [node  ]
   )
+
+(let [arr [1 2 3 4 5 6]
+      n (count arr)
+      segment-tree (build-segment-tree arr 0 (dec n))]
+  (println "segment-tree" segment-tree)
+  (println "区间和 1-3" (query-range segment-tree 0 (dec n) 1 3)))
