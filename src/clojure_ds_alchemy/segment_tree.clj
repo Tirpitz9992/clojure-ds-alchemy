@@ -25,6 +25,7 @@
 
 (defn update-segment-tree
   [node  ]
+  ;更新线段树
   )
 
 (let [arr [1 2 3 4 5 6]
